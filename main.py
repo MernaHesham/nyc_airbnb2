@@ -36,7 +36,7 @@ def go(config: DictConfig):
     with tempfile.TemporaryDirectory() as tmp_dir:
 
         if "download" in active_steps:
-            # Download file and load in W&B
+            # Download file and load in W&B 
             _ = mlflow.run(
                 f"{config['main']['components_repository']}/get_data",
                 "main",
@@ -44,7 +44,7 @@ def go(config: DictConfig):
                     "sample": config["etl"]["sample"],
                     "artifact_name": "sample.csv",
                     "artifact_type": "raw_data",
-                    "artifact_description": "Raw file as downloaded"
+                    "artifact_description": "Raw_file_as_downloaded2"
                 },
             )
 
